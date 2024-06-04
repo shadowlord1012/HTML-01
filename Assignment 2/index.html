@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This declares the character-set that is to be used-->
+    <meta charset="UTF-8">
+    <!-- This detects the screen in which the page is viewed-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Describes what is on the page-->
+    <meta name="Description" content="Assignment 1 | Favourite Song">
+    <!-- Titles for the page-->
+    <title>Petey's pizzeria</title>
+    <!-- No follow or index until page is done-->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <Header>
+        <div>
+            <a href ="index.html">
+                <img src="#" alt = "Pizza header">
+            </a>
+        </div>
+        <nav>
+            <menu>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Directions</a></li>
+                <li><a href="#">Disclaimer</a></li>
+            </menu>
+        </nav>
+    </Header>
+
+    <!-- Main content of the page -->
+    <main>
+        <section>
+            <div>
+                <h1>Petey's pizzeria</h1>
+            </div>
+        </section>
+        <!-- Number of pizzas-->
+        <section>
+            <div>
+                <h3>Number of Pizzas</h3>
+                <form action="somephpfile4" method = "post" enctype="multipart/form-data">
+                    <input type="radio" id="number_one" name="number_of_pizzas" value="One">
+                    <label for="number_one">1</label>
+                    <input type="radio" id="number_two" name="number_of_pizzas" value="One">
+                    <label for="number_two">2</label>
+                    <input type="radio" id="number_three" name="number_of_pizzas" value="One">
+                    <label for="number_three">3</label>
+                    <input type="radio" id="number_four" name="number_of_pizzas" value="One">
+                    <label for="number_four">4</label>
+                </form>
+            </div>
+        </section>
+        <!-- Pizza section size -->
+        <section>
+            <div>
+                <h3>Pizza Size</h3>
+            </div>
+            <div>
+                <form action="somephpfile" method = "post" enctype="multipart/form-data">
+                    <p>
+                        <input type="radio" id="pizza_XLarge" name="pizza_size" value="PizzaXlarge">
+                        <label for ="pizza_XLarge">X-Large</label>
+                        <input type="radio" id="pizza_large" name="pizza_size" value="PizzaLarge">
+                        <label for="pizza_large">Large</label>
+                        <input type="radio" id="pizza_medium" name="pizza_size" value="PizzaMedium">
+                        <label for="pizza_medium">Medium</label>
+                        <input type="radio" id="pizza_small" name="pizza_size" value ="PizzaSmall">
+                        <label for="pizza_small">Small</label>
+                        <input type="radio" id="pizza_individual" name="pizza_size" value="PizzaIndividual">
+                       <label for="pizza_individual">Individual</label>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Pizza sause section-->
+        <section>
+            <div>
+                <h3>Pizza Sauce choice</h3>
+            </div>
+            <div>
+                <form action="somephpfile3" method="post" enctype="multipart/form-data">
+                    <p>
+                        <input type="radio" id="Regular_sauce" name="pizza_sauce" value="Regular">
+                        <label for="Regular_sauce">Regular tomato sauce</label>
+                        <input type="radio" id="fettuccine_sauce" name="pizza_sauce" value="Fettuccine">
+                        <label for="fettuccine_sauce">Fettuccine sauce</label>
+                        <input type="radio" id="BBQ_Sauce" name="pizza_sauce" value="BBQ">
+                        <label for="BBQ_Sauce">BBQ sauce</label>
+                        <input type="radio" id="teriyaki_sauce" name="pizza_sauce" value="Teriyaki">
+                        <label for="teriyaki_sauce">Teriyaki sauce</label>
+                    </p>
+                </form>
+            </div>
+        </section>
+        <!-- Topping selection-->
+        <!-- I did some extra research to find out how i can use a image as a checkbox. This will allow a
+        visual representation of the item the user is choosing-->
+        <section>
+            <form action="someotherphpfile" method ="post" enctype="multipart/form-data">
+                <p>
+                <h3>Toppings</h3>
+                <input type="checkbox" id="Xrta_cheese">
+                <label for="Xrta_cheese">
+                    <img src="./IMG/XtraCheese.jpg" alt="Picture of cheese">
+                </label>
+                <input type="checkbox" id="Pepperoni" >
+                <label for="Pepperoni">
+                    <img src="./IMG/pepperoni.png" alt="Picture of pepperoni">
+                </label>
+                <input type="checkbox" id="sausage">
+                <label for="sausage">
+                    <img src="./IMG/sausage.jpg" alt="Picture of sausage">
+                </label>
+                <input type="checkbox" id="bacon">
+                <label for="bacon">
+                    <img src="" alt="Picture of bacon">
+                </label>
+                <input type="checkbox" id="pulled_pork">
+                <label for="pulled_pork">
+                    <img src="" alt="Picture of pulled pork">
+                </label>
+                <input type="checkbox" id="Ham">
+                <label for="Ham">
+                    <img src="" alt="Picture of ham">
+                </label>
+                <input type="checkbox" id="chicken">
+                <label for="chicken">
+                    <img src="" alt="Picture of chicken">
+                </label>
+                <input type="checkbox" id="mildItalianSausage">
+                <label for="mildItalianSausage">
+                    <img src="" alt="Picture of mild italian sausage">
+                </label>
+                <input type="checkbox" id="hotItalianSausage">
+                <label for="hotItalianSausage">
+                    <img src="" alt="Picture of hot italian sausage">
+                </label>
+                <input type="checkbox" id="ground_beef">
+                <label for="ground_beef">
+                    <img src="" alt="Picture of ground beef">
+                </label>
+                <input type="checkbox" id="shrimp">
+                <label for="shrimp">
+                    <img src="" alt="Picture of shrimp">
+                </label>
+                <input type="checkbox" id="mushrooms">
+                <label for="mushrooms">
+                    <img src="" alt="Picture of mushrooms">
+                </label>
+                <input type="checkbox" id="Olives">
+                <label for="Olives">
+                    <img src="" alt="Picture of olives">
+                </label>
+                <input type="checkbox" id="GreenPeppers">
+                <label for="GreenPeppers">
+                    <img src="" alt="Picture of a green pepper">
+                </label>
+                <input type="checkbox" id="RedOnions">
+                <label for="RedOnions">
+                    <img src="" alt="Picture of a red onion">
+                </label>
+                <input type="checkbox" id="JalapenoPepper">
+                <label for="JalapenoPepper">
+                    <img src="" alt="Picture of a jalapeno pepper">
+                </label>
+                <input type="checkbox" id="tomato">
+                <label for="tomato">
+                    <img src="" alt="Picture of a large tomatoes">
+                </label>
+                <input type="checkbox" id="pineapple">
+                <label for="pineapple">
+                    <img src="" alt="Picture of a red onion">
+                </label>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+<footer>
+    <!--information section-->
+    <section>
+        <div>
+            <form action="somephpfile5" method="post" enctype="multipart/form-data">
+                <p>Please include phone number in the specail instructions before hitting send. A phone call comfirmation will be
+                    required before final purchase goes through.</p>
+                <p><input type="text" placeholder="Full Name" name="name"> </p>
+                <p><input type="email" placeholder="Your Email" name="email"></p>
+                <p><textarea placeholder="Specail Instructions"></textarea> </p>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+</footer>
+</html>
