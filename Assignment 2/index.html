@@ -11,13 +11,16 @@
     <title>Petey's pizzeria</title>
     <!-- No follow or index until page is done-->
     <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <Header>
         <div>
             <a href ="index.html">
-                <img src="#" alt = "Pizza header">
+                <img src="./IMG/headerLogo.png" alt = "Pizza header">
             </a>
         </div>
         <nav>
@@ -31,6 +34,7 @@
 
     <!-- Main content of the page -->
     <main>
+        <!-- Main title Area-->
         <section>
             <div>
                 <h1>Petey's pizzeria</h1>
@@ -55,11 +59,10 @@
         <!-- Pizza section size -->
         <section>
             <div>
-                <h3>Pizza Size</h3>
+                <h3>Pizza Size:</h3>
             </div>
             <div>
                 <form action="somephpfile" method = "post" enctype="multipart/form-data">
-                    <p>
                         <input type="radio" id="pizza_XLarge" name="pizza_size" value="PizzaXlarge">
                         <label for ="pizza_XLarge">X-Large</label>
                         <input type="radio" id="pizza_large" name="pizza_size" value="PizzaLarge">
@@ -70,7 +73,6 @@
                         <label for="pizza_small">Small</label>
                         <input type="radio" id="pizza_individual" name="pizza_size" value="PizzaIndividual">
                        <label for="pizza_individual">Individual</label>
-                    </p>
                 </form>
             </div>
         </section>
@@ -78,11 +80,10 @@
         <!-- Pizza sause section-->
         <section>
             <div>
-                <h3>Pizza Sauce choice</h3>
+                <h3>Pizza Sauce:</h3>
             </div>
             <div>
                 <form action="somephpfile3" method="post" enctype="multipart/form-data">
-                    <p>
                         <input type="radio" id="Regular_sauce" name="pizza_sauce" value="Regular">
                         <label for="Regular_sauce">Regular tomato sauce</label>
                         <input type="radio" id="fettuccine_sauce" name="pizza_sauce" value="Fettuccine">
@@ -91,7 +92,6 @@
                         <label for="BBQ_Sauce">BBQ sauce</label>
                         <input type="radio" id="teriyaki_sauce" name="pizza_sauce" value="Teriyaki">
                         <label for="teriyaki_sauce">Teriyaki sauce</label>
-                    </p>
                 </form>
             </div>
         </section>
@@ -99,9 +99,10 @@
         <!-- I did some extra research to find out how i can use a image as a checkbox. This will allow a
         visual representation of the item the user is choosing-->
         <section>
-            <form action="someotherphpfile" method ="post" enctype="multipart/form-data">
-                <p>
+            <div>
                 <h3>Toppings</h3>
+            </div>
+            <form action="someotherphpfile" method ="post" enctype="multipart/form-data">
                 <input type="checkbox" id="Xrta_cheese">
                 <label for="Xrta_cheese">
                     <img src="./IMG/XtraCheese.jpg" alt="Picture of cheese">
@@ -116,82 +117,84 @@
                 </label>
                 <input type="checkbox" id="bacon">
                 <label for="bacon">
-                    <img src="" alt="Picture of bacon">
+                    <img src="./IMG/bacon.jpg" alt="Picture of bacon">
                 </label>
                 <input type="checkbox" id="pulled_pork">
                 <label for="pulled_pork">
-                    <img src="" alt="Picture of pulled pork">
+                    <img src="./IMG/pulled%20pork.jpg" alt="Picture of pulled pork">
                 </label>
                 <input type="checkbox" id="Ham">
                 <label for="Ham">
-                    <img src="" alt="Picture of ham">
+                    <img src="./IMG/ham.jpg" alt="Picture of ham">
                 </label>
                 <input type="checkbox" id="chicken">
                 <label for="chicken">
-                    <img src="" alt="Picture of chicken">
+                    <img src="./IMG/chicken.jpeg" alt="Picture of chicken">
                 </label>
                 <input type="checkbox" id="mildItalianSausage">
                 <label for="mildItalianSausage">
-                    <img src="" alt="Picture of mild italian sausage">
+                    <img src="./IMG/mild%20italian%20sausage.png" alt="Picture of mild italian sausage">
                 </label>
                 <input type="checkbox" id="hotItalianSausage">
                 <label for="hotItalianSausage">
-                    <img src="" alt="Picture of hot italian sausage">
+                    <img src="./IMG/hot%20italian%20sausage.jpg" alt="Picture of hot italian sausage">
                 </label>
                 <input type="checkbox" id="ground_beef">
                 <label for="ground_beef">
-                    <img src="" alt="Picture of ground beef">
+                    <img src="./IMG/groundbeef.jpg" alt="Picture of ground beef">
                 </label>
                 <input type="checkbox" id="shrimp">
                 <label for="shrimp">
-                    <img src="" alt="Picture of shrimp">
+                    <img src="./IMG/shrimp.jpg" alt="Picture of shrimp">
                 </label>
                 <input type="checkbox" id="mushrooms">
                 <label for="mushrooms">
-                    <img src="" alt="Picture of mushrooms">
+                    <img src="./IMG/mushrooms.jpg" alt="Picture of mushrooms">
                 </label>
                 <input type="checkbox" id="Olives">
                 <label for="Olives">
-                    <img src="" alt="Picture of olives">
+                    <img src="./IMG/olives.jpg" alt="Picture of olives">
                 </label>
                 <input type="checkbox" id="GreenPeppers">
                 <label for="GreenPeppers">
-                    <img src="" alt="Picture of a green pepper">
+                    <img src="./IMG/green%20peppers.jpg" alt="Picture of a green pepper">
                 </label>
                 <input type="checkbox" id="RedOnions">
                 <label for="RedOnions">
-                    <img src="" alt="Picture of a red onion">
+                    <img src="./IMG/red%20onions.jpg" alt="Picture of a red onion">
                 </label>
                 <input type="checkbox" id="JalapenoPepper">
                 <label for="JalapenoPepper">
-                    <img src="" alt="Picture of a jalapeno pepper">
+                    <img src="./IMG/jalapeno.jpg" alt="Picture of a jalapeno pepper">
                 </label>
                 <input type="checkbox" id="tomato">
                 <label for="tomato">
-                    <img src="" alt="Picture of a large tomatoes">
+                    <img src="./IMG/tomato.jpg" alt="Picture of a large tomatoes">
                 </label>
                 <input type="checkbox" id="pineapple">
                 <label for="pineapple">
-                    <img src="" alt="Picture of a red onion">
+                    <img src="./IMG/pineapple.jpg" alt="Picture of a red onion">
                 </label>
-                </p>
             </form>
         </section>
     </main>
+
+    <footer>
+        <!--information section-->
+        <section>
+            <div>
+                <form action="somephpfile5" method="post" enctype="multipart/form-data">
+                    <p>Please include phone number in the specail instructions before hitting send.</p>
+                    <p>A phone call comfirmation will be required before final purchase goes through.</p>
+                    <p><input type="text" placeholder="Full Name" name="name"> </p>
+                    <p><input type="email" placeholder="Your Email" name="email"></p>
+                    <p><textarea placeholder="Specail Instructions"></textarea> </p>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </section>
+    </footer>
 </body>
-<footer>
-    <!--information section-->
-    <section>
-        <div>
-            <form action="somephpfile5" method="post" enctype="multipart/form-data">
-                <p>Please include phone number in the specail instructions before hitting send. A phone call comfirmation will be
-                    required before final purchase goes through.</p>
-                <p><input type="text" placeholder="Full Name" name="name"> </p>
-                <p><input type="email" placeholder="Your Email" name="email"></p>
-                <p><textarea placeholder="Specail Instructions"></textarea> </p>
-                <input type="submit" value="Send">
-            </form>
-        </div>
-    </section>
-</footer>
+
+
 </html>
