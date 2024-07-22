@@ -1,3 +1,6 @@
+/*Mike Kipp
+Student # 200609745*/
+
 body{
     margin: 0px;
     color: #f8f8f8;
@@ -7,7 +10,17 @@ h1 h2 h3 h4 h5 h6 {
     font-family: "Domine", serif;
     text-decoration: none;
 }
-
+/* Had to look up how to adjust letter spacing and being able to
+adjust the x and y of the context without changing the overall size
+of the container*/
+h1{
+    letter-spacing: 25px;
+    padding-left: 25px;
+    transform: scale(1,.77);
+}
+h2{
+    letter-spacing: 8px;
+}
 /*CSS styling for digital Movie poster*/
 
 body{
@@ -16,8 +29,7 @@ body{
     grid-template-rows: auto;
     grid-template-areas:
         "header header header header"
-        "main main main main"
-        "footer footer footer footer";
+        "main main main main";
     background-image: url("../img/tremors.jpg");
     background-repeat: no-repeat;
     background-size: auto;
@@ -46,27 +58,128 @@ main{
     height: 10px;
     width: 675px;
 }
+/*Added a padding space between the little letters and title*/
 main section
 {
     padding-top: 200px;
+    padding-bottom: 75px;
 }
+/*Changes the font for the movie title*/
 main section:nth-child(2)
 {
     font-family: "Special Elite", system-ui;
-    font-size: 1.6em;
+    font-size: 3em;
+    padding-top: 200px;
+    padding-bottom: 5px;
+    color: #FFa300;
 }
+/*Bottom information*/
+/*First row*/
 main section:nth-child(3){
     font-family: "Special Elite", system-ui;
-    font-size: 0.5em;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 main section:nth-child(3) div {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 1px;
 }
 main section:nth-child(3) div p {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/*Changes the lettering sizes of all odds*/
+main section:nth-child(3) div p:nth-child(odd){
+    font-size: .1em;
+    padding-top: 10px;
+}
+/*Changes the lettering size of all evens*/
+main section:nth-child(3) div p:nth-child(even){
+    font-size: .625em;
+}
+/*Second Row*/
+main section:nth-child(4){
+    font-family: "Special Elite", system-ui;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+main section:nth-child(4) div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1px;
+}
+main section:nth-child(4) div p {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/*Changes the lettering size of all odd*/
+main section:nth-child(4) div p:nth-child(odd){
+    font-size: .1em;
+    padding-top: 10px;
+}
+/*Changes the lettering size of all even*/
+main section:nth-child(4) div p:nth-child(even){
+    font-size: .625em;
+}
+/*Third row on bottom*/
+main section:nth-child(5){
+    font-family: "Special Elite", system-ui;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+main section:nth-child(5) div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1px;
+}
+main section:nth-child(5) div p {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/*Changes all the lettering sizes for odd*/
+main section:nth-child(5) div p:nth-child(odd){
+    font-size: .1em;
+    padding-top: 8px;
+}
+/*Changes all the lettering sizes for even*/
+main section:nth-child(5) div p:nth-child(even){
+    font-size: .475em;
+}
+/*Last row on bottom*/
+main section:nth-child(6){
+    font-family: "Special Elite", system-ui;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    width: 675px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+/*Changes the image side*/
+main section:nth-child(6) div img {
+    height: auto;
+    width: 150px;
+}
+main section:nth-child(6) div+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+main section:nth-child(6) div+div p {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/*Changes all the lettering sizes for odd*/
+main section:nth-child(6) div+div p:nth-child(odd){
+    font-size: .1em;
+    padding-top: 10px;
+}
+/*Changes all the lettering sizes for even*/
+main section:nth-child(6) div+div p:nth-child(even){
+    font-size: .625em;
 }
 
