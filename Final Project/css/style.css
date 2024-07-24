@@ -1,0 +1,48 @@
+body{
+    margin: 0px;
+}
+/** default font style and size for headers **/
+h1,h2,h3,h4,h5,h6{
+    /** font-family: ; **/
+}
+/** Default styling for text and lists on the page **/
+p,a,li,figcaption,td {
+    font-size: 1.2em;
+    /** font-family: ; **/
+    text-decoration: none;
+}
+/** Desktop Styling **/
+body {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "mast mast mast mast"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer";
+    background-color: #EAEEEB;
+}
+/** Styling for the headers **/
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto;
+    text-align: left;
+    color: black;
+    height: 200px;
+    width: auto;
+    padding: 1px;
+}
+
+header div a img{
+    padding: 3px;
+    height: auto;
+    width: auto;
+}
+
+header div+div {
+
+}
