@@ -1,9 +1,11 @@
 body{
     margin: 0px;
+    padding: 0px;
 }
 /** default font style and size for headers **/
 h1,h2,h3,h4,h5,h6{
     /** font-family: ; **/
+    text-align: center;
 }
 /** Default styling for text and lists on the page **/
 p,a,li,figcaption,td {
@@ -18,31 +20,218 @@ body {
     grid-template-rows: auto;
     grid-template-areas:
         "header header header header"
-        "mast mast mast mast"
         "main main main main"
         "aside aside aside aside"
         "footer footer footer footer";
-    background-color: #EAEEEB;
+    background-color: #26dddd;
+    padding: 0px;
+    margin: 0px;
 }
 /** Styling for the headers **/
 header {
     grid-area: header;
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: auto;
-    text-align: left;
+    display: flex;
+    justify-content: left;
+    position: fixed;
     color: black;
-    height: 200px;
-    width: auto;
+    background-color: #F2f2f9;
+    height: 100px;
+    width: 100%;
+    z-index: 800;
     padding: 1px;
+    margin: 0px;
+    transition: all .25s linear;
+
 }
 
 header div a img{
-    padding: 3px;
-    height: auto;
+    flex-grow: 1;
+    height: 98%;
     width: auto;
 }
 
 header div+div {
 
+}
+
+header nav {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    justify-content: left;
+}
+header nav menu li{
+    padding: 0px 10px;
+    list-style: none;
+}
+header nav menu li img{
+    height: auto;
+    width: 50px;
+    padding-right: 5px;
+}
+
+.MobileMenu{display: none;}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+main section:nth-child(1){
+    background-color: #161423;
+}
+
+main section h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #f7e26c;
+    font-size: 6em;
+    height: 200px;
+    width: auto;
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+/*Turbo graphics 16 information page*/
+main section:nth-child(2)
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    background-color: #126d30;
+}
+
+main section:nth-child(2) h3{
+    font-size: 4em;
+    color: #d82323;
+}
+
+main section:nth-child(2) div{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+}
+
+main section:nth-child(2) div img {
+    height: 300px;
+    width: auto;
+    padding-top: 100px;
+}
+
+main section:nth-child(2) div p{
+    font-size: 2em;
+    color: #f2f2f9;
+}
+
+main section:nth-child(2) div a{
+    color: #F2f2f9;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 20px;
+}
+/*Hudson soft information area*/
+main section:nth-child(3){
+    background-color: #edb329;
+}
+main section:nth-child(3) h3{
+    font-size: 4em;
+}
+
+main section:nth-child(3) div{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+}
+main section:nth-child(3) div img{
+    height: 150px;
+    width: auto;
+}
+main section:nth-child(3) div p{
+    font-size: 2em;
+}
+main section:nth-child(3) div a{
+    padding-left: 250px;
+    padding-bottom: 10px;
+    color: #161423;
+    text-decoration: underline;
+}
+/*Three sample games and information*/
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #6c251e;
+}
+aside article figure img{
+    height: 200px;
+    width: auto;
+}
+aside article figure figcaption{
+    font-size: 1.5em;
+    color: #F2f2f9;
+}
+aside article figure a{
+    color: #26dddd;
+    text-decoration: underline;
+}
+aside article:nth-child(1) figure img{
+    padding-left: 100px;
+}
+aside article:nth-child(2) figure img{
+    padding-left: 150px;
+}
+aside article:nth-child(3) figure img{
+    padding-left:  50px;
+}
+
+/*About Us Page information*/
+#Information {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding-top: 100px;
+}
+#Information section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    text-align: center;
+    background-color: #934226;
+}
+#Information section div:nth-child(1) {
+    font-size: 1.5em;
+    color: #F2f2f9;
+}
+#Information section div:nth-child(2) img{
+    height: auto;
+    width: 400px;
+}
+
+#Information section a{
+    font-size: 1em;
+    color: #F2f2f9;
+    text-decoration: underline;
+}
+#AboutTurbo {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding-top: 100px;
+}
+#AboutTurbo section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    background-color: #edb329;
+}
+#AboutTurbo section div:nth-child(1) p{
+    font-size: 1.5em;
+}
+#AboutTurbo section div:nth-child(2) img{
+    height: 300px;
+    width: auto;
 }
