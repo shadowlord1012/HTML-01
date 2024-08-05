@@ -41,7 +41,6 @@ header {
     padding: 1px;
     margin: 0px;
     transition: all .25s linear;
-
 }
 
 header div a img{
@@ -71,19 +70,15 @@ header nav menu li img{
     padding-right: 5px;
 }
 
-.MobileMenu{display: none;}
-
 main {
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
 }
-
 main section:nth-child(1){
     background-color: #161423;
 }
-
 main section h1{
     display: flex;
     flex-direction: row;
@@ -96,36 +91,30 @@ main section h1{
     padding-bottom: 0px;
 }
 /*Turbo graphics 16 information page*/
-main section:nth-child(2)
-{
+main section:nth-child(2){
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     background-color: #126d30;
 }
-
 main section:nth-child(2) h3{
     font-size: 4em;
     color: #d82323;
 }
-
 main section:nth-child(2) div{
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: auto;
 }
-
 main section:nth-child(2) div img {
-    height: 300px;
-    width: auto;
+    height: auto;
+    width: 98%;
     padding-top: 100px;
 }
-
 main section:nth-child(2) div p{
     font-size: 2em;
     color: #f2f2f9;
 }
-
 main section:nth-child(2) div a{
     color: #F2f2f9;
     text-decoration: underline;
@@ -146,8 +135,8 @@ main section:nth-child(3) div{
     grid-template-rows: auto;
 }
 main section:nth-child(3) div img{
-    height: 150px;
-    width: auto;
+    height: auto;
+    width: 98%;
 }
 main section:nth-child(3) div p{
     font-size: 2em;
@@ -161,10 +150,23 @@ main section:nth-child(3) div a{
 /*Three sample games and information*/
 aside {
     grid-area: aside;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
     background-color: #6c251e;
+}
+aside article {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    text-align: center;
+    align-items: center;
+}
+aside article figure{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 aside article figure img{
     height: 200px;
@@ -178,14 +180,26 @@ aside article figure a{
     color: #26dddd;
     text-decoration: underline;
 }
-aside article:nth-child(1) figure img{
-    padding-left: 100px;
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #edb329;
 }
-aside article:nth-child(2) figure img{
-    padding-left: 150px;
+footer section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
 }
-aside article:nth-child(3) figure img{
-    padding-left:  50px;
+footer section div:nth-child(1) img {
+    height: 200px;
+    width: auto;
+}
+footer section div:nth-child(2) form p{
+    width: 200px;
+    height: auto;
 }
 
 /*About Us Page information*/
@@ -202,36 +216,135 @@ aside article:nth-child(3) figure img{
     text-align: center;
     background-color: #934226;
 }
-#Information section div:nth-child(1) {
+#Information section div:nth-child(1){
     font-size: 1.5em;
     color: #F2f2f9;
 }
 #Information section div:nth-child(2) img{
     height: auto;
-    width: 400px;
+    width: 98%;
 }
-
-#Information section a{
+#Information section a {
     font-size: 1em;
     color: #F2f2f9;
     text-decoration: underline;
 }
+/* about the console*/
 #AboutTurbo {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    padding-top: 100px;
 }
 #AboutTurbo section {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     background-color: #edb329;
+    padding-top: 100px;
 }
 #AboutTurbo section div:nth-child(1) p{
     font-size: 1.5em;
 }
 #AboutTurbo section div:nth-child(2) img{
-    height: 300px;
-    width: auto;
+    height: auto;
+    width: 98%;
+    padding-top: 50px;
+}
+
+/*Buy Now Page*/
+#BuyNowPage {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    background-color: #6a5fa0;
+    padding-top: 100px;
+}
+#BuyNowPage h1{
+    font-size: 3em;
+    color: #1fcb23;
+}
+#BuyNowPage h2 {
+    font-size: 2em;
+    color: #1fcb23;
+    text-decoration: underline;
+}
+#BuyNowPage section{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+#BuyNowPage section button{
+    width:100px;
+    height: 50px;
+    border: solid 2px #1867a0;
+    background-color: #26dddd;
+    align-self: center;
+    color: #126d30;
+}
+#BuyNowPage section div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+#BuyNowPage section div img{
+    height: auto;
+    width: 98%;
+}
+
+/*When the screen is less then 1024px*/
+@media screen and (max-width: 1024px){
+
+    #BuyNowPage section div p{
+        font-size: 1.25em;
+    }
+}
+
+/*When the screen width is less the 768px*/
+@media screen and (max-width: 768px) {
+
+/*The Main index Page*/
+    main section{
+        width: auto;
+    }
+    main section h1{
+        font-size: 3em;
+        height: 100px;
+        width: auto;
+    }
+    main section:nth-child(2) h3{
+        font-size: 2em;
+    }
+    main section:nth-child(2) div p, a{
+        font-size: 1em;
+    }
+    main section:nth-child(2) div img{
+        padding-top: 25px;
+    }
+    main section:nth-child(3) h3{
+        font-size: 2em;
+    }
+    main section:nth-child(3) div p, a{
+        font-size: 1em;
+    }
+    aside article figure figcaption{
+        font-size: 1em;
+    }
+
+    /* The information page */
+    #Information section div:nth-child(1) p{
+        font-size: .625em;
+    }
+    #Information section div:nth-child(2) img{
+        height: auto;
+        width: 75%;
+    }
+
+    /*The About Turbo page*/
+    #AboutTurbo section div:nth-child(1) p{
+        font-size: 1em;
+    }
+    #AboutTurbo section div:nth-child(2) img{
+        height: auto;
+        width: 85%;
+    }
 }
