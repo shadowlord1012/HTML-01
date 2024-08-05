@@ -176,9 +176,11 @@ aside article figure figcaption{
     font-size: 1.5em;
     color: #F2f2f9;
 }
-aside article figure a{
+aside article a{
     color: #26dddd;
     text-decoration: underline;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 footer {
