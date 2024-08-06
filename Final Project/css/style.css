@@ -4,16 +4,16 @@ body{
 }
 /** default font style and size for headers **/
 h1,h2,h3,h4,h5,h6{
-    /** font-family: ; **/
+    font-family: "Press Start 2P", system-ui;
     text-align: center;
 }
 /** Default styling for text and lists on the page **/
 p,a,li,figcaption,td {
-    font-size: 1.2em;
-    /** font-family: ; **/
+    font-size: 1em;
+    font-family: "Press Start 2P", system-ui;
     text-decoration: none;
 }
-/** Desktop Styling **/
+/** default styling**/
 body {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -69,7 +69,7 @@ header nav menu li img{
     width: 50px;
     padding-right: 5px;
 }
-
+/*Main page*/
 main {
     grid-area: main;
     display: grid;
@@ -84,7 +84,7 @@ main section h1{
     flex-direction: row;
     justify-content: center;
     color: #f7e26c;
-    font-size: 6em;
+    font-size: 5em;
     height: 200px;
     width: auto;
     padding-top: 100px;
@@ -98,7 +98,7 @@ main section:nth-child(2){
     background-color: #126d30;
 }
 main section:nth-child(2) h3{
-    font-size: 4em;
+    font-size: 3em;
     color: #d82323;
 }
 main section:nth-child(2) div{
@@ -112,7 +112,7 @@ main section:nth-child(2) div img {
     padding-top: 100px;
 }
 main section:nth-child(2) div p{
-    font-size: 2em;
+    font-size: 1.5em;
     color: #f2f2f9;
 }
 main section:nth-child(2) div a{
@@ -126,7 +126,7 @@ main section:nth-child(3){
     background-color: #edb329;
 }
 main section:nth-child(3) h3{
-    font-size: 4em;
+    font-size: 3em;
 }
 
 main section:nth-child(3) div{
@@ -139,7 +139,7 @@ main section:nth-child(3) div img{
     width: 98%;
 }
 main section:nth-child(3) div p{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 main section:nth-child(3) div a{
     padding-left: 250px;
@@ -173,7 +173,7 @@ aside article figure img{
     width: auto;
 }
 aside article figure figcaption{
-    font-size: 1.5em;
+    font-size: 1em;
     color: #F2f2f9;
 }
 aside article a{
@@ -288,9 +288,14 @@ footer section div:nth-child(2) form p{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
 }
-#BuyNowPage section div img{
+#BuyNowPage section div:nth-child(2) img{
     height: auto;
     width: 98%;
+}
+
+#BuyNowPage section div:nth-child(5) img{
+    height: auto;
+    width: 65%;
 }
 
 /*When the screen is less then 1024px*/
@@ -309,32 +314,33 @@ footer section div:nth-child(2) form p{
         width: auto;
     }
     main section h1{
-        font-size: 3em;
+        font-size: 2em;
         height: 100px;
         width: auto;
     }
     main section:nth-child(2) h3{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     main section:nth-child(2) div p, a{
-        font-size: 1em;
+        font-size: .625em;
     }
     main section:nth-child(2) div img{
         padding-top: 25px;
     }
     main section:nth-child(3) h3{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     main section:nth-child(3) div p, a{
-        font-size: 1em;
+        font-size: .625em;
     }
     aside article figure figcaption{
-        font-size: 1em;
+        font-size: .625em;
     }
 
     /* The information page */
     #Information section div:nth-child(1) p{
-        font-size: .625em;
+        font-size: .5em;
+        padding-left: 2px;
     }
     #Information section div:nth-child(2) img{
         height: auto;
@@ -343,10 +349,46 @@ footer section div:nth-child(2) form p{
 
     /*The About Turbo page*/
     #AboutTurbo section div:nth-child(1) p{
-        font-size: 1em;
+        font-size: .625em;
+        padding-left: 5px;
     }
     #AboutTurbo section div:nth-child(2) img{
         height: auto;
         width: 85%;
     }
+    /*Buy Now Page*/
+    #BuyNowPage h1{
+        font-size: 2em;
+    }
+    #BuyNowPage h2{
+        font-size: 1.5em;
+    }
+    #BuyNowPage section div p{
+        font-size: .625em;
+    }
+    #BuyNowPage section button{
+        width:75px;
+        height: 30px;
+        border: solid 2px #1867a0;
+        background-color: #26dddd;
+        align-self: center;
+        color: #126d30;
+    }
+    #BuyNowPage section div:nth-child(1) img{
+        height: auto;
+        width: 75%;
+    }
+    #BuyNowPage section div:nth-child(2) img{
+        height: auto;
+        width: 75%;
+    }
+    #BuyNowPage section div:nth-child(3) img{
+        height: auto;
+        width: 75%;
+    }
+    #BuyNowPage section div:nth-child(5) img{
+        height: auto;
+        width: 55%;
+    }
+
 }
