@@ -30,8 +30,9 @@ body {
 /** Styling for the headers **/
 header {
     grid-area: header;
-    display: flex;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     position: fixed;
     color: black;
     background-color: #F2f2f9;
@@ -50,6 +51,32 @@ header div a img{
 }
 
 header div+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Animation for the character and fire*/
+#Character{
+    width:36px;
+    height:27px;
+    background: url("../img/animationSprite.png") ;
+    animation: play 1s steps(6) infinite; /*Total number of sprites needed for this value*/
+}
+
+@keyframes play{
+    100% { background-position: -213px; } /*Total Width needed for this value*/
+}
+
+#Fire{
+    width: 16px;
+    height: 32px;
+    background: url("../img/FireShot.png");
+    animation: playFire 1s steps(7) infinite;
+}
+/*I had to change the animation so that it will only animate the previous*/
+@keyframes playFire {
+    100% { background-position: -112px; }
 
 }
 
@@ -183,23 +210,23 @@ aside article a{
     padding-bottom: 5px;
 }
 
-footer {
+#footer {
     grid-area: footer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #edb329;
 }
-footer section{
+#footer section{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
 }
-footer section div:nth-child(1) img {
+#footer section div:nth-child(1) img {
     height: 200px;
     width: auto;
 }
-footer section div:nth-child(2) form p{
+#footer section div:nth-child(2) form p{
     width: 200px;
     height: auto;
 }
@@ -276,11 +303,15 @@ footer section div:nth-child(2) form p{
     grid-template-rows: auto;
 }
 #BuyNowPage section button{
+    font-family: "Press Start 2P", system-ui;
+    font-size: .625em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width:100px;
     height: 50px;
     border: solid 2px #1867a0;
     background-color: #26dddd;
-    align-self: center;
     color: #126d30;
 }
 #BuyNowPage section div {
@@ -367,6 +398,7 @@ footer section div:nth-child(2) form p{
         font-size: .625em;
     }
     #BuyNowPage section button{
+        font-size: .5em;
         width:75px;
         height: 30px;
         border: solid 2px #1867a0;
@@ -389,6 +421,34 @@ footer section div:nth-child(2) form p{
     #BuyNowPage section div:nth-child(5) img{
         height: auto;
         width: 55%;
+    }
+
+}
+
+/*When the screen width is less then 425px*/
+@media screen and (max-width: 426px){
+
+    #BuyNowPage h1{
+        font-size: 1em;
+    }
+    #BuyNowPage h2{
+        font-size: .8em;
+    }
+
+    #footer{
+        align-items: center;
+    }
+    #footer section {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+    #footer section div:nth-child(1) img{
+        height: auto;
+        width: 50%;
+    }
+    #footer section div:nth-child(2) form p{
+        font-size: .625em;
     }
 
 }
